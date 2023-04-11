@@ -1,0 +1,82 @@
+[
+    {
+        "_id": "64351f73d6283986e0ab3214",
+        "picture": "https://i.ibb.co/d40jvmx/Cardiopulmonary-11-11zon.jpg",
+        "rating": 5,
+        "price": 31,
+        "serviceName": "Cardiopulmonary",
+        "descriptions": "Cardiopulmonary resuscitation (CPR) is a lifesaving technique that's useful in many emergencies, such as a heart attack or near drowning, in which someone's breathing or heartbeat has stopped. The American Heart Association recommends starting CPR with hard and fast chest compressions\r\n"
+    },
+    {
+        "_id": "64351f73793f1916d4b3a426",
+        "picture": "https://i.ibb.co/9Y5d3HR/Echocardiography-1-11zon.jpg",
+        "rating": 4,
+        "price": 23,
+        "serviceName": "Echocardiography (Echo) Lab",
+        "descriptions": "This test demonstrates the heart's structure and function and shows your doctors how the valves inside your heart are working. Echo tests can be used to evaluate how various diseases may affect the heart such as high blood pressure, heart disease, heart failure, stroke, cancer and more.\r\n"
+    },
+    {
+        "_id": "64351f73cc88864db6fd2ba1",
+        "picture": "https://i.ibb.co/TmdVVZm/Heart-Catheterizations-4-11zon.jpg",
+        "rating": 3,
+        "price": 36,
+        "serviceName": "Heart Catheterizations | Cardiac Lab",
+        "descriptions": "A healthy heart is a happy heart, and you should always have access to treatment for complex heart and vascular conditions so you can lead a full life.\r\n"
+    },
+    {
+        "_id": "64351f7314a8b2f59fab8e9d",
+        "picture": "https://i.ibb.co/SVzgrct/Interventional-Cardiology-2-11zon.jpg",
+        "rating": 4,
+        "price": 40,
+        "serviceName": "Interventional Cardiology",
+        "descriptions": "Interventional cardiology is a specialty that diagnoses and treats heart and blood vessel conditions using small tubes called catheters. Working with these small tubes, which they put through your blood vessels, allows providers to avoid doing open-heart surgery.\r\n"
+    },
+    {
+        "_id": "64351f735eb65a263446ae37",
+        "picture": "https://i.ibb.co/1rwmWvF/Cardiac-rehabilitation-10-11zon.jpg",
+        "rating": 4,
+        "price": 37,
+        "serviceName": "Cardiac rehabilitation",
+        "descriptions": "Cardiac rehabilitation is a supervised program that includes: Physical activity. Education about healthy living, including how to eat healthy, take medicine as prescribed, and quit smoking. Counseling to find ways to relieve stress and improve mental health.\r\n"
+    },
+    {
+        "_id": "64351f73ddcc6dfdc4c4723a",
+        "picture": "https://i.ibb.co/fkPKJ8F/Heart-rhythm-monitoring-1-11zon.jpg",
+        "rating": 4,
+        "price": 30,
+        "serviceName": "Heart rhythm monitoring",
+        "descriptions": "A heart rhythm monitor is a diagnostic test in which the electrical activity of your heart is recorded in order to identify an irregular heart rhythm, or cardiac arrhythmia, one of the common heart disorders.\r\n"
+    },
+    {
+        "_id": "64351f739187874c05c93e61",
+        "picture": "https://i.ibb.co/1v1Gy3w/General-cardiology-consultation-3-11zon.jpg",
+        "rating": 5,
+        "price": 23,
+        "serviceName": "General cardiology consultation",
+        "descriptions": "A cardiology consultation is usually requested by your general internist, family doctor or sometimes another specialist or surgeon when he or she wishes to have a cardiac specialist (cardiologist) use his or her expertise to evaluate you.\r\n"
+    },
+    {
+        "_id": "64351f73884ee3f6bee62bf7",
+        "picture": "https://i.ibb.co/4V9McyH/Cardiac-Catheterization-9-11zon.jpg",
+        "rating": 4,
+        "price": 21,
+        "serviceName": "Cardiac Catheterization",
+        "descriptions": "Cardiac catheterization (kath-uh-tur-ih-ZAY-shun) is a procedure in which a thin, flexible tube (catheter) is guided through a blood vessel to the heart to diagnose or treat certain heart conditions, such as clogged arteries or irregular heartbeats.\r\n"
+    },
+    {
+        "_id": "64351f7355cb1fd86aec487b",
+        "picture": "https://i.ibb.co/LRs1HvW/Electrocardiogram-testing-of-the-heart-s-electrical-activity-EKG-testing-2.jpg",
+        "rating": 3,
+        "price": 26,
+        "serviceName": "Electrocardiogram testing of the heart’s electrical activity (EKG testing)",
+        "descriptions": "An electrocardiogram (ECG or EKG) records the electrical signal from the heart to check for different heart conditions. Electrodes are placed on the chest to record the heart's electrical signals, which cause the heart to beat. The signals are shown as waves on an attached computer monitor or printer.\r\n"
+    },
+    {
+        "_id": "64351f7361803b9f24fb2bd5",
+        "picture": "https://i.ibb.co/HBxfn7n/Anticoagulation-therapy-and-management-for-heart-valve-patients-8-11zon.jpg",
+        "rating": 5,
+        "price": 32,
+        "serviceName": "Anticoagulation therapy and management for heart valve patients",
+        "descriptions": "Most patients with VHD require surgery to repair or replace the valve and subsequent antithrombotic therapy to prevent clotting. Antithrombotic therapy options that are commonly used after valve replacement or repair are vitamin K antagonists, such as warfarin, and antiplatelet agents, such as aspirin.\r\n"
+    }
+]
