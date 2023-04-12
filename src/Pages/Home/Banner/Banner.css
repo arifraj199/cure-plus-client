@@ -8,3 +8,14 @@
     display:inline-block;
     background: linear-gradient(to right, #151515 0%,rgba(21, 21, 21, 0) 100%); /* W3C */
   }
+
+.img-height{
+  height: 650px;
+}
+
+@media only screen and (max-width: 688px){
+  .img-height{
+    height: 100%;
+  }
+}
+

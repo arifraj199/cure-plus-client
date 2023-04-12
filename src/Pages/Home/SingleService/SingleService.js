@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-const Services = ({ service }) => {
-  const { serviceName, price, rating, descriptions, picture,_id } = service;
-  const navigate = useNavigate()
+const SingleService = ({ singleService }) => {
+  const { serviceName, price, rating, descriptions, picture } = singleService;
   return (
     <div className="card w-96 bg-base-100 shadow-xl text-left">
       <figure>
@@ -20,7 +18,7 @@ const Services = ({ service }) => {
             Price: <span className="font-bold">${price}</span>
           </div>
         </div>
-        <button onClick={()=>navigate(`/allservices/${_id}`)} className="btn btn-primary mt-5 text-white">
+        <button className="btn btn-primary mt-5 text-white">
           View Details
         </button>
       </div>
@@ -28,4 +26,4 @@ const Services = ({ service }) => {
   );
 };
 
-export default Services;
+export default SingleService;
