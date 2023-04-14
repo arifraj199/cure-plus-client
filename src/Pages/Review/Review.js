@@ -33,6 +33,7 @@ const Review = ({ reviews }) => {
           </div>
         </figcaption>
       </figure>
+      
     </div>
   );
 };

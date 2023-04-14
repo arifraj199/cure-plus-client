@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Review from "../Review/Review";
+import AddReview from "../AddReview/AddReview";
 
 const ServiceDetails = () => {
   const services = useLoaderData();
@@ -45,6 +46,8 @@ const ServiceDetails = () => {
             }
         </div>
       </div>
+      <hr className="w-1/2 mx-auto"/>
+      <AddReview setReviews={setReviews} reviews={reviews}></AddReview>
     </div>
   );
 };
