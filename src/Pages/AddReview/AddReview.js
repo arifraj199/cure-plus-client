@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-hot-toast";
 
 const AddReview = ({ setReviews, reviews }) => {
   const handleAddReviewForm = (event) => {
@@ -30,6 +31,7 @@ const AddReview = ({ setReviews, reviews }) => {
         if (data.acknowledged) {
           const allReviews = [customersReview, ...reviews];
           setReviews(allReviews);
+          toast.success("Review Added Successfully");
           form.reset();
         }
       });

@@ -1,15 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo from '../../../assets/logo.png'
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../../../assets/logo.png";
+import { AuthProvider } from "../../context/AuthContext";
 
 const Header = () => {
-    const menu = [
-        <li><Link to='/'>Home</Link></li>,
-        <li><Link to='/services'>Services</Link></li>,
-        <li><Link to='/blog'>Blog</Link></li>,
-        <li><Link to='/contact'>Contact</Link></li>,
-        
-    ]
+  const { user, logOut } = useContext(AuthProvider);
+  const navigate = useNavigate();
+  const menu = [
+    <li>
+      <Link to="/">Home</Link>
+    </li>,
+    <li>
+      <Link to="/services">Services</Link>
+    </li>,
+    <li>
+      <Link to="/blog">Blog</Link>
+    </li>,
+    <li>
+      <Link to="/contact">Contact</Link>
+    </li>,
+  ];
+
+  const handleSignOut = () => {
+    logOut()
+      .then((res) => {
+        navigate("/login");
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="navbar bg-accent sticky top-0 z-30 text-white">
       <div className="navbar-start">
@@ -35,15 +53,37 @@ const Header = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-accent rounded-box w-52"
           >
             {menu}
+            {user?.email ? (
+              <li className="btn">
+                <Link onClick={handleSignOut} to="">
+                  SignOut
+                </Link>
+              </li>
+            ) : (
+              <li className="btn">
+                <Link to="/login">Login</Link>
+              </li>
+            )}
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost normal-case text-xl">
-          <img width='170' src={logo} alt="" />
-        </Link >
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          <img width="170" src={logo} alt="" />
+        </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-        {menu}
+          {menu}
+          {user?.email ? (
+            <li className="btn">
+              <Link onClick={handleSignOut} to="">
+                SignOut
+              </Link>
+            </li>
+          ) : (
+            <li className="btn">
+              <Link to="/login">Login</Link>
+            </li>
+          )}
         </ul>
       </div>
     </div>
