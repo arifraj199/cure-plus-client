@@ -16,9 +16,6 @@ const Header = () => {
     <li>
       <Link to="/blog">Blog</Link>
     </li>,
-    <li>
-      <Link to="/contact">Contact</Link>
-    </li>,
   ];
 
   const handleSignOut = () => {
@@ -54,11 +51,21 @@ const Header = () => {
           >
             {menu}
             {user?.email ? (
-              <li className="btn">
-                <Link onClick={handleSignOut} to="">
-                  SignOut
-                </Link>
-              </li>
+              <>
+                <li>
+                  <Link to="/myreviews">My Reviews</Link>
+                </li>
+
+                <li>
+                  <Link to="/addservice">Add Service</Link>
+                </li>
+
+                <li className="btn">
+                  <Link onClick={handleSignOut} to="">
+                    SignOut
+                  </Link>
+                </li>
+              </>
             ) : (
               <li className="btn">
                 <Link to="/login">Login</Link>
@@ -74,11 +81,21 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">
           {menu}
           {user?.email ? (
-            <li className="btn">
-              <Link onClick={handleSignOut} to="">
-                SignOut
-              </Link>
-            </li>
+            <>
+              <li>
+                <Link to="/myreviews">My Reviews</Link>
+              </li>
+
+              <li>
+                <Link to="/addservice">Add Service</Link>
+              </li>
+
+              <li className="btn">
+                <Link onClick={handleSignOut} to="">
+                  SignOut
+                </Link>
+              </li>
+            </>
           ) : (
             <li className="btn">
               <Link to="/login">Login</Link>

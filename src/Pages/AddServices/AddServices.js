@@ -1,42 +1,35 @@
-import React, { useContext } from "react";
+import React from "react";
 import { toast } from "react-hot-toast";
-import { AuthProvider } from "../context/AuthContext";
 
-const AddReview = ({ setReviews, reviews,serviceName }) => {
-  const {user} = useContext(AuthProvider);
-  const handleAddReviewForm = (event) => {
+const AddServices = () => {
+  const handleAddServiceForm = (event) => {
     event.preventDefault();
     const form = event.target;
-    const name = form.name.value;
+    const serviceName = form.name.value;
     const picture = form.image.value;
+    const price = form.price.value;
     const rating = form.number.value;
-    const Date_of_experience = form.date.value;
-    const review = form.review.value;
-    const email = user?.email;
+    const descriptions = form.descriptions.value;
 
-    const customersReview = {
-      name,
+    const addedService = {
       serviceName,
-      email,
       picture,
+      price,
       rating,
-      Date_of_experience,
-      review,
+      descriptions,
     };
 
-    fetch("http://localhost:5000/review", {
+    fetch("http://localhost:5000/allservices", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(customersReview),
+      body: JSON.stringify(addedService),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          const allReviews = [customersReview, ...reviews];
-          setReviews(allReviews);
-          toast.success("Review Added Successfully");
+          toast.success("Service Added Successfully");
           form.reset();
         }
       });
@@ -44,9 +37,9 @@ const AddReview = ({ setReviews, reviews,serviceName }) => {
 
   return (
     <div className="my-10">
-      <h2 className="text-2xl">Add Your Review</h2>
+      <h2 className="text-2xl">Add Service</h2>
       <hr className="w-12 mx-auto  bg-primary h-1" />
-      <form onSubmit={handleAddReviewForm} className="hero ">
+      <form onSubmit={handleAddServiceForm} className="hero ">
         <div className="hero-content w-1/2">
           <div className="card  w-full max-w-md shadow-md bg-base-100">
             <div className="card-body">
@@ -69,25 +62,24 @@ const AddReview = ({ setReviews, reviews,serviceName }) => {
               <div className="form-control">
                 <input
                   type="number"
-                  name="number"
-                  placeholder="Rating"
+                  name="price"
+                  placeholder="Price"
                   className="input border border-gray-300 focus:outline-none border-b-1 border-r-0 border-l-0 border-t-0 rounded-none border:hover-none"
                 />
               </div>
-
               <div className="form-control">
                 <input
-                  type="date"
-                  name="date"
-                  placeholder="Date Issue"
+                  type="number"
+                  name="number"
+                  placeholder="Rating"
                   className="input border border-gray-300 focus:outline-none border-b-1 border-r-0 border-l-0 border-t-0 rounded-none border:hover-none"
                 />
               </div>
               <div className="form-control">
                 <textarea
                   className="textarea  border focus:outline-none border-gray-300 border-b-1 border-r-0 border-l-0 border-t-0 rounded-none border:hover-none"
-                  placeholder="Review"
-                  name="review"
+                  placeholder="Descriptions"
+                  name="descriptions"
                 ></textarea>
               </div>
               <div className="form-control mt-6">
@@ -106,4 +98,4 @@ const AddReview = ({ setReviews, reviews,serviceName }) => {
   );
 };
 
-export default AddReview;
+export default AddServices;

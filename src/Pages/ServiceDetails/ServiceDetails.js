@@ -51,7 +51,7 @@ const ServiceDetails = () => {
       <hr className="w-1/2 mx-auto" />
       {user?.email ? (
         <div>
-          {<AddReview setReviews={setReviews} reviews={reviews}></AddReview>}
+          {<AddReview setReviews={setReviews} reviews={reviews} serviceName={serviceName}></AddReview>}
         </div>
       ) : (
         <p className="mt-6 ">

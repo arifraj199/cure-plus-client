@@ -5,7 +5,14 @@ const SingleService = ({ singleService }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl text-left">
       <figure>
-        <img src={picture} alt="" />
+        <img
+          style={{
+            height: "300px",
+            width: "100%",
+          }}
+          src={picture}
+          alt=""
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-2xl font-bold">{serviceName}</h2>
